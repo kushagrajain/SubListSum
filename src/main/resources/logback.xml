@@ -9,13 +9,13 @@
 
     <!--Daily rolling file appender -->
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>/Users/rajesh/log/SubListSumLog.log</file>
+		<file>${user.home}/log/SubListSum.log</file>
 		<append>true</append>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>%d{HH:mm:ss.SSS} %-5level {%thread} [%logger{40}] : %msg%n</pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/var/log/app.log-%d{yyyyMMdd}-%i.log.zip</fileNamePattern>
+			<fileNamePattern>/log/SubListSumLog.log-%d{yyyyMMdd}-%i.log.zip</fileNamePattern>
 			<maxHistory>30<!-- days --></maxHistory>
 			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>200MB</maxFileSize>

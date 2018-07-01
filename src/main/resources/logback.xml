@@ -9,7 +9,7 @@
 
     <!--Daily rolling file appender -->
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>/var/log/app.log</file>
+		<file>/Users/rajesh/log/SubListSumLog.log</file>
 		<append>true</append>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>%d{HH:mm:ss.SSS} %-5level {%thread} [%logger{40}] : %msg%n</pattern>
